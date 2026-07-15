@@ -49,9 +49,16 @@ nav{
     color: #fff;
 }
 
+.controls-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+    width: 100%;
+}
 #progress-bar{
     -webkit-appearance: none;
     appearance: none;
+    flex-grow: 1;
     width: 100%;
     height: 6px;
     background: gray;
@@ -64,16 +71,25 @@ nav{
     -webkit-appearance: none;
     appearance: none;
     width: 15px;
-    height: 15px;
-    
-    
+    height: 15px;   
 }
+
+.current-time{
+    color: #fff;
+    font-size: 12px;
+    order: -1;
+}
+
 .navigation{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     color: azure; 
+
+     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+     padding-bottom: 30px;          
+   
 }
 
 #navigation-circle{
@@ -89,4 +105,13 @@ nav{
     padding-left: 3px;
     font-size: 0.9rem;
     
+}
+
+.bottom-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    color: azure; 
+
 }
