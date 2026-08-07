@@ -14,6 +14,8 @@ const title = document.getElementById("track-title");
 const artist = document.getElementById("artist-title");
 const playBtn = document.getElementById("navigation-circle");
 const progressBar = document.querySelector(".controls-wrapper");
+const nextBtn = document.getElementById("next-btn");
+const previoustBtn = document.getElementById("prev-btn");
 
 // Select and play a specific track
 function selectTrack(index) {
@@ -65,3 +67,37 @@ function togglePlay() {
 }
 
 playBtn.addEventListener("click", togglePlay);
+
+
+function nextSong() {
+    if (currentTrackIndex === null) {
+        currentTrackIndex = 0;
+    } else if (currentTrackIndex === playlist.length - 1) {
+        currentTrackIndex = 0;
+    } else {
+        currentTrackIndex += 1;
+    }
+
+    loadTrack(currentTrackIndex);
+    playTrack();
+}
+
+nextBtn.addEventListener("click", nextSong);
+
+function prevSong(){
+    if (currentTrackIndex === null) {
+        currentTrackIndex = 0;
+    } else if (currentTrackIndex === 0) {
+        currentTrackIndex = playlist.length - 1;
+    } else {
+        currentTrackIndex -= 1;
+    }
+
+    loadTrack(currentTrackIndex);
+    playTrack();
+}
+
+previoustBtn.addEventListener("click", prevSong);
+
+
+

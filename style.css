@@ -109,15 +109,11 @@ nav{
     
 }
 
-.bottom-icons {
+.bottom-icons{
     display: flex;
     justify-content: space-between;
-    padding: 0 10px;
-}
+    align-items: center;
+    margin-top: auto;
+    color: azure; 
 
-.bottom-icons i {
-    font-size: 1.1rem;
-    color: #fff;
-    cursor: pointer;
-    transition: color 0.2s ease;
 }
