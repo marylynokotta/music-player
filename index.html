@@ -10,42 +10,47 @@
 <body>
 
     <div class="container">
-
         <div class="music-player">
             <nav>
-
                 <div class="top-bar">
                     <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-
-
-                    <div class="top-bar">
-                   <i class="fa-solid fa-bars"></i> 
+                </div>
+                <div class="top-bar">
+                    <i class="fa-solid fa-bars"></i> 
                 </div>
             </nav>
 
-    <img src="assets/Maclaren.jpg" class="song-img">
-    <h1 id="track-title">Track Name</h1>
-    <p id="artist-title">Artist</p>
+            <img src="assets/Maclaren.jpg" class="song-img">
+            <h1 id="track-title">Track Name</h1>
+            <p id="artist-title">Artist</p>
 
-    <div class="controls-wrapper">
-    <input type="range" min="0" max="180" value="0" id="progress-bar">
-    <span class="current-time">0:00</span>
-    </div>
+            <audio id="audio-player"></audio>
 
-    <div class="navigation">
-                    <i class="fa-solid fa-shuffle"></i>
-                    <i class="fa-solid fa-play" id="navigation-circle"></i>
-                   <i class="fa-solid fa-repeat"></i> 
+            <div class="controls-wrapper">
+                <input type="range" min="0" value="0" id="progress-bar">
+                <div class="time-display">
+                    <span id="current-time">0:00</span>
+                    <span id="duration-time">0:00</span>
                 </div>
+            </div>
 
-     <div class="bottom-icons">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-solid fa-list-check"></i>
+            <div class="navigation">
+                <i class="fa-solid fa-shuffle"></i>
+                <i class="fa-solid fa-backward" id="prev-btn"></i>
+                <i class="fa-solid fa-play" id="navigation-circle"></i>
+                <i class="fa-solid fa-forward" id="next-btn"></i>
+                <i class="fa-solid fa-repeat"></i> 
+            </div>
 
-                </div>
+            <div class="bottom-icons">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-list-check"></i>
+            </div>
         </div>
+    </div> 
 
-     </div> 
+    
+    <script src="script.js"></script>
+
 </body>
 </html>
