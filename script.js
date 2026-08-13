@@ -18,6 +18,8 @@ let currentTrackIndex = null;
 let isPlaying = false;
 let isRepeating = false;
 let isShuffling = false;
+let likeCount = 0;
+let isLiked = false;
 
 const audio = document.getElementById("audio-player");
 const title = document.getElementById("track-title");
@@ -27,6 +29,8 @@ const nextBtn = document.getElementById("next-btn");
 const previoustBtn = document.getElementById("prev-btn");
 const shuffleBtn = document.getElementById("shuff-btn");
 const repeatBtn = document.getElementById("rep-btn");
+
+
 
 // selecting the song
 function selectTrack(index) {
@@ -179,4 +183,18 @@ function initializePlayer(audioElement) {
 
 initializePlayer(audio);
 
+const likeBtn = document.getElementById("like");
 
+likeBtn.addEventListener('click', () => {
+    isLiked= !isLiked;
+
+    likeBtn.classList.toggle('liked');
+
+    if (isLiked) {
+    likeCount++;
+  } else {
+    likeCount--;
+  }
+  
+  countDisplay.textContent = likeCount;
+});
