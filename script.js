@@ -18,7 +18,6 @@ let currentTrackIndex = null;
 let isPlaying = false;
 let isRepeating = false;
 let isShuffling = false;
-let likeCount = 0;
 let isLiked = false;
 
 const audio = document.getElementById("audio-player");
@@ -29,6 +28,7 @@ const nextBtn = document.getElementById("next-btn");
 const previoustBtn = document.getElementById("prev-btn");
 const shuffleBtn = document.getElementById("shuff-btn");
 const repeatBtn = document.getElementById("rep-btn");
+const likeBtn = document.getElementById("like-btn");
 
 
 
@@ -183,18 +183,19 @@ function initializePlayer(audioElement) {
 
 initializePlayer(audio);
 
-const likeBtn = document.getElementById("like");
 
-likeBtn.addEventListener('click', () => {
-    isLiked= !isLiked;
+// making of the like button //
 
-    likeBtn.classList.toggle('liked');
+function likeTrack(){
+     isLiked = !isLiked;
 
-    if (isLiked) {
-    likeCount++;
-  } else {
-    likeCount--;
-  }
-  
-  countDisplay.textContent = likeCount;
-});
+     likeBtn.classList.toggle("fa-regular", !isLiked);
+     likeBtn.classList.toggle("fa-solid", isLiked);
+
+     if(isLiked){
+        console.log("Liked")
+        } else {
+        console.log("Unliked");
+    }
+}
+likeBtn.addEventListener("click", likeTrack);

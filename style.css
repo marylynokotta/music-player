@@ -117,5 +117,10 @@ nav{
     color: azure; 
 
 }
+.like-btn {
+    color: black; 
+}
 
-
+.like-btn.liked {
+    color: red;
+}
